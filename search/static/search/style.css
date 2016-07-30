@@ -1,0 +1,39 @@
+body{
+
+}
+
+.navbar{
+    border-radius: 0;
+    background-color: #536DFE;
+    opacity: 0.9;
+}
+
+
+          ul.footer{
+            margin-top:20px;
+            text-align:center;
+          }
+
+         ul.footer li{
+          color:#757575;
+          display:inline-block;
+          }
+
+
+       #footer{
+        background-color: #EEEEEE;
+        bottom: -2px;
+        height: 60px;
+        left: 0;
+        position: absolute;
+        right: 0;
+       }
+
+ #Feed{
+
+        margin-top: 56px;
+        height: 110px;
+        background-color: #FAFAFA;
+        border-bottom: 2px solid #F5F5F5;
+
+ }

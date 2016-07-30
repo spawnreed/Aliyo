@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'search/style.css' %}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>ALIYO</title>
+</head>
+<body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <!-- Be sure to leave the brand out there if you want it shown -->
+          <a class="brand" href="#"><img src="http://i1167.photobucket.com/albums/q627/spawnreed/Aliyo3x_zpsgtbnztde.png?t=1469759787" height="55"> ALIYO</a>
+
+          <!-- Everything you want hidden at 940px or less, place within here -->
+          <div class="nav-collapse collapse">
+            <!-- .nav, .navbar-search, .navbar-form, etc -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="Feed"> c </div>
+
+{% block body %}
+{% endblock %}
+
+
+     <div class="container">
+      <div class="row">
+       <div class="span12">
+        <div id="footer">
+
+           <ul class="footer">
+
+            <li> Made in &copy <a href="#"> Spawn Industries Inc.</a> </li>&nbsp;&nbsp;
+            <!--<li> <a href="#"> Learn More </a> </li>-->
+           <ul>
+
+        </div>
+     </div>
+  </div>
+</div>
+
+</body>
+
+
+</html>
