@@ -5,7 +5,7 @@ from django.db import models
 
 class Board(models.Model):
     board_name = models.CharField(max_length=250)
-    board_votes = models.IntegerField(default=0)
+    like = models.BooleanField(default=False)
     board_icon = models.FileField(default="none")
 
     def __str__(self):
@@ -14,7 +14,7 @@ class Board(models.Model):
 
 class Response(models.Model):
     response_text = models.CharField(max_length=1000, default='default')
-    response_votes = models.IntegerField(default=0)
+    like = models.BooleanField(default=False)
     board = models.ForeignKey(Board, on_delete=models.CASCADE)
     image = models.FileField(default="none")
 
@@ -34,7 +34,7 @@ class Phrase(models.Model):
 
 class Tag(models.Model):
     tag_name = models.CharField(max_length=250)
-    tag_votes = models.IntegerField(default=0)
+    like = models.BooleanField(default=False)
     board = models.ForeignKey(Board, on_delete=models.CASCADE)
 
     def __str__(self):
