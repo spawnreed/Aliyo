@@ -6,7 +6,8 @@ from .models import Board, Response, Phrase, Tag
 
 
 def search_form(request):
-    return render(request, 'search/search_form.html')
+    popular = Board.objects.filter(board_votes__gt=5)
+    return render(request, 'search/search_form.html', {'popular': popular})
 
 
 def search(request):

@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
     {% load staticfiles %}
+    <link href='https://fonts.googleapis.com/css?family=Allerta+Stencil' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'search/style.css' %}"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="{% static 'search/script.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <title>ALIYO</title>
 </head>
@@ -33,7 +36,23 @@
       </div>
     </div>
 
-    <div class="container-fluid" id="Feed"> c </div>
+    <div class="container-fluid" id="Feed"> 
+        <!--<button id="hide"><span class="glyphicon glyphicon-remove" aria-hidden="true" id="remove"></span></button>-->
+       <div class="icons">
+           {% if popular%}
+    
+        {% for Board in popular %}
+    <ul style="list-style-type:none">
+        <li><a href="#"> <img src="{{ Board.board_icon.url }}" height="60"> <br> <h5 class="board_name">  {{ Board.board_name }} </h5> </a></li>
+
+        {% endfor %}
+</ul>
+{% else %}
+    <p>No boards matched your search criteria.</p>
+{% endif %}
+    </div>
+    </div>
+    
 
 {% block body %}
 {% endblock %}
