@@ -1,0 +1,91 @@
+{% extends 'search/base.html'%}
+{% block body%}
+
+<body class="board-page">
+
+
+    <div class="board-detail">
+    {%if signs%}
+    <div class="container-fluid" id="board-box">
+        <div class="board-header">
+        <img src="{{board.board_icon.url}}" height="60" class="board-fav"/>
+     <h1 class="yo"> {{ board }} </h1>
+     <p class="sign"> This board has {{signs}} signatures. </p>
+            {%endif%}
+            </div>
+
+    <div class="responses">
+
+        {% if response %}
+        <p> {{response}} </p>
+     </div>
+
+         {%endif%}
+
+
+
+<!--<div class="phrases">-->
+        <!--{% for phrase in board.phrase_set.all %}-->
+        <!--<p> {{phrase.phrase_title}} </p>-->
+     <!--</div>-->
+        <!---->
+        <!--{%endfor%}-->
+     </div>
+
+   <div class="phrase-options">
+
+        {% if phrase %}
+
+    <div class="phrase1">
+
+        <a href="#"> {{ phrase}} </a>
+
+    </div>
+        {%endif%}
+
+
+      {% if phrase2 %}
+
+    <div class="phrase2">
+
+        <a href="#"> {{ phrase2 }} </a>
+
+    </div>
+        {%endif%}
+
+
+        {% if phrase3 %}
+
+    <div class="phrase3">
+
+        <a href="#"> {{ phrase3 }} </a>
+
+    </div>
+
+        {%endif%}
+
+
+         {% if phrase4 %}
+
+    <div class="phrase3">
+
+        <a href="#"> {{ phrase4 }} </a>
+
+    </div>
+
+        {%endif%}
+
+
+
+
+    </div>
+        </div>
+
+</body>
+
+{% endblock%}
+
+
+
+
+

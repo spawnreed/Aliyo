@@ -1,3 +1,7 @@
+{% extends 'search/base.html'%}
+{% block body%}
+
+
 <p>You searched for: <strong>{{ query }}</strong></p>
 {% if board%}
     <p>Found {{ board|length }} board{{ board|pluralize }}.</p>
@@ -10,3 +14,5 @@
 {% else %}
     <p>No boards matched your search criteria.</p>
 {% endif %}
+
+{% endblock%}
